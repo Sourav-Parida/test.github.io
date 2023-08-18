@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourav Parida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-CQ.css">
+
+
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <header>
+            <nav>
+                <div class=logo><a href="#Home">Sourav</a> </div>
+                <ul class="navbar items-center">
+                    <li><a href="#About">About me</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Ov7PVV5QMyLLCTZWGq_qYt-dRohEqj5z/view?usp=drive_link"
+                            target="_blank">
+                            Resume</a></li>
+                    <li><a href="#Learning">Learning</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="min-h-screen">
+            <div class="CQcont">
+                <br>
+                <h1>C - Interview questions</h1>
+                <hr>
+                <br>
+        <h2>BASIC</h2>
+        <br>
+            <br>
+        <h3>1. Why is C called a mid-level programming language?</h3>
+                <p>C has characteristics of both assembly-level i.e. low-level and higher-level languages. So as a result, C is commonly called a middle-level language. Using C, a user can write an operating system as well as create a menu-driven consumer billing system.</p><br>
+        <h3>2. What are the features of the C language?</h3>
+                <p>Some features of the C language are-&nbsp;</p><br>
+                <p>It is Simple and Efficient.&nbsp;</p>
+                <p>C language is portable or Machine Independent.</p>
+                <p>C is a mid-level Programming Language.&nbsp;</p>
+                <p>It is a structured Programming Language.</p>
+                <p>It has a function-rich library.&nbsp;</p>
+                <p>Dynamic Memory Management.</p>
+                <p>C is superfast.</p>
+                <p>We can use pointers in C.</p>
+                <p>It is extensible.</p><br>
+        <h3>3. What is a token?</h3>
+                <p>The individual elements of a program are called Tokens. There are following 6 types of tokens are available in C:</p><br>
+                <p>Identifiers</p>
+                <p>Keywords</p>
+                <p>Constants</p>
+                <p>Operators</p>
+                <p>Special Characters</p>
+                <p>Strings</p><br>
+        <h3>4. What is the use of printf() and scanf() functions? Also explain format specifiers?</h3>
+                <p>printf() is used to print the output on the display.</p>
+                <p>scanf() is used to read formatted data from the keyboard.&nbsp;</p>
+                <p>Some datatype format specifiers for both printing and scanning purposes are as follows:</p><br>
+                <p>%d: It&apos;s a datatype format specifier for printing and scanning an integer value.&nbsp;</p>
+                <p>%s: It&apos;s a datatype format specifier for printing and scanning a string.&nbsp;</p>
+                <p>%c: It&apos;s a datatype format specifier for displaying and scanning a character value.</p>
+                <p>%f: The datatype format specifier %f is used to display and scan a float value.</p><br>
+        <h3>5. What&apos;s the value of the expression 5[&quot;abxdef&quot;]?</h3>
+                <p>The answer is &apos;f&apos;.</p><br>
+                <p>Explanation: The string mentioned &quot;abxdef&quot; is an array, and the &nbsp;expression is equal to &quot;abxdef&quot;[5]. Why is the inside-out expression equivalent? &nbsp;Because a[b] is equivalent to *(a + b) which is equivalent to *(b + a) which is equivalent to b[a].</p>
+        <h3>6. What is a built-in function in C?</h3>
+                <p>The most commonly used built-in functions in C are scanf(), printf(), strcpy, strlwr, strcmp, strlen, strcat, and many more.</p><br>
+                <p>Built-function is also known as library functions that are provided by the system to make the life of a developer easy by assisting them to do certain commonly used predefined tasks. For example, if you need to print output or your program into the terminal, we use printf() in C.</p><br>
+        <h3>7. What is a Preprocessor?</h3><br>
+                <p>A preprocessor is a software program that processes a source file before sending it to be compiled. Inclusion of header files, macro expansions, conditional compilation, and line control are all possible with the preprocessor.</p><br>
+                <p><img src="https://lh6.googleusercontent.com/egfMFLwOuiipEMxQaqYQLmICl8GbbyrIjxjLarNuvBb4Kj_CwDsiyIrXpblroTWCa6onEX53niFl-xLBd0hzS9Nt7CvjWc3ZyTy_B4pxmUxl1Pu1F4D5hl0hZQAuq11fHhVrx5ICjcSMCyCaIDUa-A" width="223" height="262"></p><br>
+        <h3>8. In C, what is the #line used for?</h3><br>
+                <p>In C, #line is used as a preprocessor to re-set the line number in the code, which takes a parameter as line number. Here is an example for the same.</p><br>
+                <p>#include &lt;stdio.h&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 1*/</p>
+                <p>&nbsp; &nbsp; int main(){ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 3*/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; printf(&quot;Hello world\n&quot;); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 4*/</p>
+                <p>&nbsp; &nbsp; //print current line &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 5*/</p>
+                <p>&nbsp; &nbsp; printf(&quot;Line: %d\n&quot;,__LINE__); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 6*/</p>
+                <p>&nbsp; &nbsp; //reset the line number by 36 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 7*/</p>
+                <p>&nbsp; &nbsp; #line 36 &nbsp; &nbsp;/*reseting*/</p>
+                <p>&nbsp; &nbsp; //print current line &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 36*/</p>
+                <p>&nbsp; &nbsp; printf(&quot;Line: %d\n&quot;,__LINE__); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 37*/</p>
+                <p>&nbsp; &nbsp; printf(&quot;Bye bye!!!\n&quot;); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 39*/</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /*line 40*/</p>
+                <p>&nbsp; &nbsp; return 0; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 41*/</p>
+                <p>} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/*line 42*/</p><br>
+        <h3>9. How can a string be converted to a number?</h3>
+                <p>The function takes the string as an input that needs to be converted to an integer.</p><br>
+                <p>int atoi(const char *string)</p>
+                <p>Return Value:</p><br>
+                <p>On successful conversion, it returns the desired integer value</p>
+                <p>If the string starts with alpha-numeric char or only contains alpha-num char, 0 is returned.</p>
+                <p>In case string starts with numeric character but is followed by alpha-num char, the string is converted to integer till the first occurrence of alphanumeric char.</p><br>
+                <p>Converting String to Number</p>
+                <p><img src="q9.png" width="432" height="109"></p><br>
+            <h3>10. How can a number be converted to a string?</h3>
+                <p>The function takes a pointer to an array of char elements that need to be converted, and a format string needs to be written in a buffer as a string</p><br>
+                <p>int sprintf(char *str, const char *format, ...)</p>
+                <p>&nbsp;</p><br><br>
+                <p>The output after running the above code:</p><br>
+                <p>Output: Value of Pi = 3.141593</p><br>
+            <h3>11. What is recursion in C?</h3>
+                <p>When a function in C calls a copy of itself, this is known as recursion. To put it another way, when a function calls itself, this technique is called Recursion. Also, this function is known as recursive function.</p>
+                <p>Syntax of Recursive Function:</p>
+                <p>void do_recursion()</p>
+                <p>{&nbsp;</p>
+                <p>... .. ...&nbsp;</p>
+                <p>do_recursion();</p>
+                <p>... .. ...]</p>
+                <p>}&nbsp;</p>
+                <p>int main()&nbsp;</p>
+                <p>{</p>
+                <p>... .. ...</p>
+                <p>do_recursion();</p>
+                <p>... .. ...</p>
+                <p>}</p>
+            <h3>12. Why doesn&rsquo;t C support function overloading?</h3>
+                <p>After you compile the C source, the symbol names need to be intact in the object code. If we introduce function overloading in our source, we should also provide name mangling as a preventive measure to avoid function name clashes. Also, as C is not a strictly typed language many things(ex: data types) are convertible to each other in C. Therefore, the complexity of overload resolution can introduce confusion in a language such as C.</p><br>
+                <p>When you compile a C source, symbol names will remain intact. If you introduce function overloading, you should provide a name mangling technique to prevent name clashes. Consequently, like C++, you&apos;ll have machine-generated symbol names in the compiled binary.</p><br>
+                <p>Additionally, C does not feature strict typing. Many things are implicitly convertible to each other in C. The complexity of overload resolution rules could introduce confusion in such kind of language</p><br>
+            <h3>13. What is the difference between global int and static int declaration?</h3>
+                <p>The difference between this is in scope. A truly global variable has a global scope and is visible everywhere in your program.</p><br>
+                <p>#include &lt;stdio.h&gt;&nbsp;</p>
+                <p>int my_global_var = 0; &nbsp;</p>
+                <p>int main(void){&nbsp;</p>
+                <p>&nbsp; printf(&quot;%d\n&quot;, my_global_var);&nbsp;</p>
+                <p>&nbsp; return 0;&nbsp;</p>
+                <p>}&nbsp;</p><br>
+                <p>global_temp is a global variable that is visible to everything in your program, although to make it visible in other modules, you&apos;d need an &rdquo;extern int global_temp; &rdquo; in other source files if you have a multi-file project.</p><br>
+                <p>A static variable has a local scope but its variables are not allocated in the stack segment of the memory. It can have less than global scope, although - like global variables - it resides in the .bss segment of your compiled binary.</p><br>
+                <p>#include &lt;stdio.h&gt;&nbsp;</p>
+                <p>int myfunc(int val){&nbsp;</p>
+                <p>&nbsp; &nbsp; static int my_static_var = 0;&nbsp;</p>
+                <p>&nbsp; &nbsp; my_static_var += val;&nbsp;</p>
+                <p>&nbsp; &nbsp; return my_static_var;&nbsp;</p>
+                <p>}&nbsp;</p><br>
+                <p>int main(void) {&nbsp;</p>
+                <p>&nbsp; &nbsp;int myval;&nbsp;</p>
+                <p>&nbsp; &nbsp;myval = myfunc(1);&nbsp;</p>
+                <p>&nbsp; &nbsp;printf(&quot;first call %d\n&quot;, myval);&nbsp;</p>
+                <p>&nbsp; &nbsp;myval = myfunc(10);&nbsp;</p>
+                <p>&nbsp; &nbsp;printf(&quot;second call %d\n&quot;, myval);&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp; &nbsp;return 0;&nbsp;</p>
+                <p>}</p>
+            <h3>14. What is a pointer in C?</h3>
+                <p>A pointer is a variable that stores or points to another variable&apos;s address. The value of a variable is stored in a normal variable, whereas the address of a variable is stored in a pointer variable.</p>
+                <p><img src="https://lh6.googleusercontent.com/AvFHibZrsor_DzTK3WYvX1cRcYTrWoyQf_OQAZImsTXSfOrHEYOe-ZG3y6vRuY_3RoaTVg_KlhQvxOL7Mnp-3utM91uI75w7JdYJmmuHpZoU0Wq2qer9DsqaPryX7Au5VDVp_TWenwHkr4sLPaMM5A" width="423" height="259"></p><br>
+            <h3>15. Difference between const char* p and char const* p?</h3>
+                <p>const char* p is a pointer to a const char.</p>
+                <p>char const* p is a pointer to a char const.</p>
+                <p>Since const char and char const are the same, it&apos;s the same.</p><br>
+            <h3>16. What is pointer to pointer in C?</h3>
+                <p>In C, a pointer can also be used to store the address of another pointer. A double pointer or pointer to pointer is such a pointer. The address of a variable is stored in the first pointer, whereas the address of the first pointer is stored in the second pointer.</p><br>
+                <p>The syntax of declaring a double pointer is given below:</p><br>
+                <p>int **p; // pointer to a pointer which is pointing to an integer</p><br>
+            <h3>17. Why n++ executes faster than n+1 ?</h3>
+                <p>n++ being a unary operation, it just needs one variable. Whereas, n = n + 1 is a binary operation that adds overhead to take more time (also binary operation: n += 1). However, in modern platforms, it depends on few things such as processor architecture, C compiler, usage in your code, and other factors such as hardware problems.</p><br>
+                <p>While in the modern compiler even if you write n = n + 1 it will get converted into n++ when it goes into the optimized binary, and it will be equivalently efficient.</p>
+                <p><img src="https://lh3.googleusercontent.com/d6r-Yrh5hJBBjP9VtQqxD_Dr58bh4F9sAvdbReBBmIFVSy4pK-hKStcQ_tOXQlbpRdsv-z-igMR7uE6hLg6zoXIV9stgY8DpXrDEC-Ssbt-SCNEi1TSKI33JQfZP4LH_QCKDc8Wr85FM_JX0nGOgBg" width="603" height="159"></p>
+            <h3>18. What is typecasting in C?</h3>
+                <p>Typecasting is the process to convert a variable from one datatype to another. &nbsp;If we want to store the large type value to an int type, then we will convert the data type into another data type explicitly.</p><br>
+                <p>Syntax: (data_type)expression;</p><br>
+                <p>For Example:</p><br>
+                <p>int x;</p>
+                <p>for(x=97; x&lt;=122; x++)</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp;printf(&quot;%c&quot;, (char)x); &nbsp; /*Explicit casting from int to char*/</p>
+                <p>}</p><br>
+            <h3>19. What are the advantages of Macro over function?</h3>
+                <p>Macro on a high-level copy-paste, its definitions to places wherever it is called. Due to which it saves a lot of time, as no time is spent while passing the control to a new function and the control is always with the callee function. However, one downside is the size of the compiled binary is large but once compiled the program comparatively runs faster.</p><br>
+            <h3>20. What are Enumerations?</h3>
+                <p>Enumeration, also known as Enum in C, is a user-defined data type. It consists of constant integrals or integers that have names assigned to them by the user. Because the integer values are named with enum in C, the whole program is simple to learn, understand, and maintain by the same or even different programmer.</p><br>
+            <h3>21. When should we use the register storage specifier?</h3>
+                <p>If a variable is used frequently, it should be declared with the register storage specifier, and the compiler may allocate a CPU register for its storage to speed up variable lookup.</p><br>
+        <br>
+        <h2>INTERMEDIATE</h2>
+        <br>
+            <h3>22. Specify different types of decision control statements?</h3>
+                <p>All statements written in a program are executed from top to bottom one by one. Control statements are used to execute/transfer the control from one part of the program to another depending on the condition.</p><br>
+                <p>If-else statement.</p>
+                <p>normal if-else statement.</p>
+                <p>Else-if statement</p>
+                <p>nested if-else statement.</p>
+                <p>Switch statement.</p><br>
+            <h3>23. What is an r-value and l-value?</h3>
+                <p>The term &quot;r-value&quot; refers to a data value stored in memory at a given address. An r-value is an expression that cannot have a value assigned to it, hence it can only exist on the right side of an assignment operator(=).</p>
+                <p>The term &quot;l-value&quot; refers to a memory location that is used to identify an object. The l-value can be found on either the left or right side of an assignment operator(=). l-value is frequently used as an identifier.</p><br>
+            <h3>24. What is the difference between malloc() and calloc()?</h3>
+                <p>calloc() and malloc() are memory dynamic memory allocating functions. The main difference is that malloc() only takes one argument, which is the number of bytes, but calloc() takes two arguments, which are the number of blocks and the size of each block.</p><br>
+            <h3>25. What is the difference between struct and union in C?</h3>
+                <p>A struct is a group of complex data structures stored in a block of memory where each member on the block gets a separate memory location to make them accessible at once</p><br>
+                <p>Whereas in the union, all the member variables are stored at the same location on the memory as a result to which while assigning a value to a member variable will change the value of all other members.</p><br>
+                <p>/* struct &amp; union definations*/</p>
+                <p>struct bar {</p>
+                <p>&nbsp; &nbsp; int a; &nbsp; &nbsp;// we can use a &amp; b both simultaneously</p>
+                <p>&nbsp; &nbsp; char b;</p>
+                <p>} &nbsp; &nbsp;bar;</p><br>
+                <p>union foo {</p>
+                <p>&nbsp; &nbsp; int a; &nbsp; &nbsp;// we can&apos;t use both a and b simultaneously</p>
+                <p>&nbsp; &nbsp; char b;</p>
+                <p>} &nbsp; &nbsp;foo;</p><br>
+                <p>/* using struc and union variables*/</p><br>
+                <p>struct bar y;</p>
+                <p>y.a = 3; &nbsp; &nbsp;// OK to use</p>
+                <p>y.b = &apos;c&apos;; // OK to use</p>
+                <p>union foo x;</p>
+                <p>x.a = 3; // OK</p>
+                <p>x.b = &apos;c&apos;; // NOl this affects the value of x.a!</p><br>
+            <h3>26. What is call by reference in functions?</h3>
+                <p>When we caller function makes a function call bypassing the addresses of actual parameters being passed, then this is called call by reference. In incall by reference, the operation performed on formal parameters affects the value of actual parameters because all the operations performed on the value stored in the address of actual parameters.</p><br>
+            <h3>27. What is pass by reference in functions?</h3>
+                <p>In Pass by reference, the callee receives the address and makes a copy of the address of an argument into the formal parameter. Callee function uses the address to access the actual argument (to do some manipulation). If the callee function changes the value addressed at the passed address it will be visible to the caller function as well.</p><br><br>
+                <p>Pass By Reference</p>
+                <p><img src="https://lh4.googleusercontent.com/YkffemBkS_t-9YUvpVYNnBKQwoYSlru2GARGpgOchGo8LcjX-S_D5Xq9dxij6UC2yUvgkcPceL_DgUATTR_bZ1zwAMGamheSxsFiD8Ky9oJda4wdPlrwg2dOAc6rYuXx5co9fJcQqUR7_HBMyEu95Q" width="645" height="262"></p>
+            <h3>28. What is a memory leak? How to avoid it?</h3>
+                <p>When we assign a variable it takes space of our RAM (either heap or RAM)dependent on the size of data type, however, if a programmer uses a memory available on the heap and forgets to a delta it, at some point all the memory available on the ram will be occupied with no memory left this can lead to a memory leak.</p><br>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; char * ptr = malloc(sizeof(int));</p>
+                <p>&nbsp; &nbsp; /* Do some work */</p>
+                <p>&nbsp; &nbsp; /*Not freeing the allocated memory*/</p>
+                <p>&nbsp; &nbsp; return 0;</p>
+                <p>}</p>
+                <p>To avoid memory leaks, you can trace all your memory allocations and think forward, where you want to destroy (in a good sense) that memory and place delete there. Another way is to use C++ smart pointer in C linking it to GNU compilers.</p><br>
+            <h3>29. What is Dynamic memory allocation in C? Name the dynamic allocation functions.</h3>
+                <p>C is a language known for its low-level control over the memory allocation of variables in DMA there are two major standard library malloc() and free. The malloc() function takes a single input parameter which tells the size of the memory requested It returns a pointer to the allocated memory. If the allocation fails, it returns NULL. The prototype for the standard library function is like this:</p><br>
+                <p>void *malloc(size_t size);</p>
+                <p>The free() function takes the pointer returned by malloc() and de-allocates the memory. No indication of success or failure is returned. The function prototype is like this:&nbsp;</p><br>
+                <p>void free(void *pointer);</p>
+                <p>There are 4 library functions provided by C defined under &lt;stdlib.h&gt; header file to facilitate dynamic memory allocation in C programming. They are:</p>
+                <p>malloc()</p>
+                <p>calloc()</p>
+                <p>free()</p>
+                <p>realloc()</p>
+            <h3>30. What is typedef?</h3>
+                <p>typedef is a C keyword, used to define alias/synonyms for an existing type in C language. In most cases, we use typedef&apos;s to simplify the existing type declaration syntax. Or to provide specific descriptive names to a type.</p><br>
+                <p>typedef &lt;existing-type&gt; &lt;new-type-identifiers&gt;;</p>
+                <p>typedef provides an alias name to the existing complex type definition. With typedef, you can simply create an alias for any type. Whether it is a simple integer to complex function pointer or structure declaration, typedef will shorten your code.</p><br>
+            <h3>31. Why is it usually a bad idea to use gets()? Suggest a workaround.</h3>
+                <p>The standard input library gets() reads user input till it encounters a new line character. However, it does not check on the size of the variable being provided by the user is under the maximum size of the data type which makes the system vulnerable to buffer overflow and the input being written into memory where it isn&rsquo;t supposed to.</p><br>
+                <p>We, therefore, use gets() to achieve the same with a restricted range of input</p><br>
+                <p>Bonus: It remained an official part of the language up to the 1999 ISO C standard, but it was officially removed by the 2011 standard. Most C implementations still support it, but at least GCC issues a warning for any code that uses it.</p><br>
+            <h3>32. What is the difference between #include &quot;...&quot; and #include &lt;...&gt;?</h3>
+                <p>In practice, the difference is in the location where the preprocessor searches for the included file.</p><br>
+                <p>For #include &lt;filename&gt; the C preprocessor looks for the filename in the predefined list of system directories first and then to the directories told by the user(we can use -I option to add directories to the mentioned predefined list).&nbsp;</p><br>
+                <p>For #include &quot;filename&quot; the preprocessor searches first in the same directory as the file containing the directive, and then follows the search path used for the #include &lt;filename&gt; form. This method is normally used to include programmer-defined header files.</p><br>
+            <h3>33. What are dangling pointers? How are dangling pointers different from memory leaks?</h3>
+                <p>The dangling pointer points to a memory that has already been freed. The storage is no longer allocated. Trying to access it might cause a Segmentation fault. A common way to end up with a dangling pointer:</p><br>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>#include&lt;string.h&gt;</p>
+                <p>char *func()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; char str[10];</p>
+                <p>&nbsp; &nbsp; strcpy(str,&quot;Hello!&quot;);</p>
+                <p>&nbsp; &nbsp; return(str);</p>
+                <p>}</p>
+                <p>You are returning an address that was a local variable, which would have gone out of scope by the time control was returned to the calling function. (Undefined behavior)</p>
+                <p>*c = malloc(5izeof(int));</p>
+                <p>free(c);</p>
+                <p>*c = 3; //writing to freed location!</p>
+                <p>In the figure shown above writing to a memory that has been freed is an example of the dangling pointer, which makes the program crash.</p><br>
+                <p>A memory leak is something where the memory allocated is not freed which causes the program to use an undefined amount of memory from the ram making it unavailable for every other running program(or daemon) which causes the programs to crash. There are various tools like O profile testing which is useful to detect memory leaks on your programs.</p><br>
+                <p>void function(){</p>
+                <p>&nbsp; &nbsp; char *leak = malloc (10); &nbsp; &nbsp;//leak assigned but not freed</p>
+                <p>}</p><br>
+            <h3>34. What is the difference between &lsquo;g&rsquo; and &ldquo;g&rdquo; in C?</h3>
+                <p>In C double-quotes variables are identified as a string whereas single-quoted variables are identified as the character. Another major difference being the string (double-quoted) variables end with a null terminator that makes it a 2 character array.</p><br>
+            <h3>35. What is a near pointer and a far pointer in C?</h3>
+                <p>Near Pointer: In general, the near pointer can be considered because it is used to hold the address, which has a maximum size of just 16 bits. We can&apos;t store an address with a size larger than 16 bits using the near pointer. All other smaller addresses that are within the 16-bit limit, on the other hand, can be stored. Because we can only access 64kb of data at a time, you might assume the 16 bits are insufficient. As a result, it is regarded as one of the near-pointer&apos;s biggest drawbacks, which is why it is no longer commonly used.</p>
+                <p>Far Pointer: A far pointer is considered a pointer of size 32 bits. It can, however, use the current segment to access information stored outside the computer&apos;s memory. Although, in order to use this type of pointer, we usually need to allocate the sector register to store the data address in the current segment.</p><br>
+            <h3>36. Which structure is used to link the program and the operating system?</h3>
+                <p>The file structure is used to link the operating system and a program. The header file &quot;stdio.h&quot; (standard input/output header file) defines the file. It contains information about the file being used like its current size and its memory location. It contains a character pointer that points to the character which is currently being opened. When you open a file, it establishes a link between the program and the operating system about which file is to be accessed.</p><br>
+            <h3>37. Suppose a global variable and local variable have the same name. Is it possible to access a global variable from a block where local variables are defined?</h3>
+                <p>No. This isn&rsquo;t possible in C. It&rsquo;s always the most local variable that gets preference.</p><br>
+            <h3>38. Which is better #define or enum?</h3>
+                <p>If we let it, the compiler can build enum values automatically. However, each of the defined values must be given separately.</p>
+                <p>Because macros are preprocessors, unlike enums, which are compile-time entities, the source code is unaware of these macros. So, if we use a debugger to debug the code, the enum is superior.</p>
+                <p>Some compilers will give a warning if we use enum values in a switch and the default case is missing.</p>
+                <p>Enum always generates int-type identifiers. The macro, on the other hand, allowed us to pick between various integral types.</p>
+                <p>Unlike enum, the macro does not have a defined scope constraint.</p>
+        <br>
+            <h2>ADVANCED</h2>
+        <br>
+            <h3>39. How can you remove duplicates in an array?</h3>
+                <p>The following program will help you to remove duplicates from an array.</p><br>
+                <p>#include &lt;stdio.h&gt;</p>
+                <p>int main() {</p>
+                <p>&nbsp; &nbsp; int n, a[100], b[100], calc = 0, i, j,count;</p>
+                <p>&nbsp; &nbsp; printf(&quot;Enter no. of elements in array: &quot;);</p>
+                <p>&nbsp; &nbsp; scanf(&quot;%d&quot;, &amp;n);</p>
+                <p>&nbsp; &nbsp; printf(&quot;Enter %d integers: &quot;, n);</p>
+                <p>&nbsp; &nbsp; for (i = 0; i &lt; n; i++)</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%d&quot;, &amp;a[i]);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; for (i = 0; i&lt;n; i++) {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; for (j = 0; j&lt;calc; j++) {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if(a[i] == b[j])</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; if (j== calc) {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b[calc] = a[i];</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;calc++;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp;}</p>
+                <p>&nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp;printf(&quot;Array obtained after removing duplicate elements: &quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp;for (i = 0; i&lt;calc; i++) {&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d &quot;, b[i]);</p>
+                <p>&nbsp; &nbsp; &nbsp;}</p>
+                <p>&nbsp; &nbsp; &nbsp;return 0;</p>
+                <p>}</p><br>
+            <h3>40. Can we compile a program without a main() function?</h3>
+                <p>Yes, we can compile a program without main() function Using Macro.</p><br>
+                <p>E.g.</p>
+                <p>#include&lt;studio.h&gt;</p>
+                <p>#define abc main</p>
+                <p>int abc ()</p>
+                <p>{</p>
+                <p>printf(&quot;Hello World &quot;);</p>
+                <p>return 0;</p>
+                <p>}</p><br>
+            <h3>41. Write a program to get the higher and lower nibble of a byte without using shift operator?</h3><br>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>struct full_byte</p>
+                <p>{</p>
+                <p>char first : 4;</p>
+                <p>char second : 4;</p>
+                <p>};</p><br>
+                <p>union A</p>
+                <p>{</p>
+                <p>char x;</p>
+                <p>struct full_byte by;</p>
+                <p>};</p><br>
+                <p>main()</p>
+                <p>{</p>
+                <p>char c = 100;</p>
+                <p>union A a;</p>
+                <p>a.x = c;</p>
+                <p>printf(&quot;the two nibbles are: %d and %d\n&quot;, a.by.first, a.by.second);</p>
+                <p>}</p>
+            <h3>42. How do you override a defined macro?</h3>
+                <p>To override a defined macro we can use #ifdef and #undef preprocessors as follows:</p><br>
+                <p>#ifdef A</p>
+                <p>#undef A</p>
+                <p>#endif</p>
+                <p>#define A 10</p>
+                <p>If macro A is defined, it will be undefined using undef and then defined again using define.</p><br>
+            <h3>43. Write a C program to check if it is a palindrome number or not using a recursive method.</h3>
+                <p>#include &lt;stdio.h&gt;</p>
+                <p>#include &lt;conio.h&gt;</p>
+                <p>int reverse(int num);</p>
+                <p>int isPalindrome(int num);</p>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; int num;</p>
+                <p>&nbsp; &nbsp; printf(&quot;Enter a number: &quot;);</p>
+                <p>&nbsp; &nbsp; scanf(&quot;%d&quot;, &amp;num);</p>
+                <p>if(isPalindrome(num) == 1)</p>
+                <p>{</p>
+                <p>&nbsp;printf(&quot;the given number is a palindrome&quot;);</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; else</p>
+                <p>&nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;the given number is not a palindrome number&quot;);</p>
+                <p>&nbsp; &nbsp;}</p>
+                <p>&nbsp; &nbsp; return 0;</p>
+                <p>}</p><br>
+                <p>int isPalindrome(int num)</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; if(num == reverse(num))</p>
+                <p>&nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; return 1;</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; return 0;</p>
+                <p>}</p>
+                <p>int reverse(int num)</p>
+                <p>{</p>
+                <p>int rem;</p>
+                <p>&nbsp; &nbsp; static int sum=0;</p>
+                <p>&nbsp; &nbsp; if(num!=0){</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rem=num%10;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum=sum*10+rem;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reverse(num/10);</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; else</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return sum;</p>
+                <p>&nbsp; &nbsp; return sum;</p>
+                <p>}</p><br>
+            <h3>44. C program to check the given number format is in binary or not.</h3>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>#include&lt;conio.h&gt;</p>
+                <p>int main() {</p>
+                <p>&nbsp; &nbsp; int j,num;</p>
+                <p>&nbsp; &nbsp; printf(&quot;Please enter a number :&quot;);</p>
+                <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;num);</p>
+                <p>&nbsp; &nbsp; while(num&gt;0)</p>
+                <p>&nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; j=num%10;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; if( j!=0 &amp;&amp; j!=1 )</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;printf(&quot;num is not binary&quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; num=num/10;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; if(num==0)</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;num is binary&quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; getch();</p>
+                <p>}</p><br>
+            <h3>45. C Program to find a sum of digits of a number using recursion.</h3>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>#include&lt;conio.h&gt;</p><br>
+                <p>int sumOfDigits(int num)</p>
+                <p>&nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; static int sum = 0;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int rem;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum = sum + (num%10);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rem = num/10;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(rem &gt; 0)</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sumOfDigits(rem);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return sum;</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>int main() {</p>
+                <p>&nbsp; &nbsp; int j,num;</p>
+                <p>&nbsp; &nbsp; printf(&quot;Please enter a number :&quot;);</p>
+                <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;num);</p>
+                <p>&nbsp; &nbsp; printf(&quot;sum of digits of the number = %d &quot;,sumOfDigits(num));</p>
+                <p>&nbsp; &nbsp; getch();</p>
+                <p>}</p><br>
+            <h3>46. Can you tell me how to check whether a linked list is circular?</h3>
+                <p>Single Linked List</p>
+                <p><img src="https://lh5.googleusercontent.com/BRN25kT7UFgh9jctUpdWezBqTMLqYaHz98BVhrKir8O12TIIE04qK7S0if5qiY_XPFF2dRCl_o8Ly_I5dPjHKx6SXLmKUc1ftDnt6MX3llmeFO30PLVGNLFGwu47zJyEpPIUsq7wDwm88hS4GjpU8A" width="720" height="206"></p><br>
+                <p>Circular Linked List</p><br>
+                <p>Circular linked list is a variation of a linked list where the last node is pointing to the first node&apos;s information part. Therefore the last node does not point to null.</p><br>
+                <p>Algorithm to find whether the given linked list is circular</p>
+                <p>A very simple way to determine whether the linked list is circular or not</p>
+                <p>Traverse the linked list</p>
+                <p>Check if the node is pointing to the head.</p>
+                <p>If yes then it is circular.</p>
+                <p>Let&apos;s look at the snippet where we code this algorithm.</p><br>
+                <p>Create a structure for a linked list</p>
+                <p>Declare</p>
+                <p>-Variable to store data of the node.</p>
+                <p>-Pointer variable of struct type to store the address of next node.</p><br>
+                <p>function of datatype tool isCircular(firstgode){</p><br>
+                <p>-Store the value of first node in temp variable and make it traverse all nodes.</p>
+                <p>-temp-firstgode</p>
+                <p>-tempenext node pointed by temp(temp-&gt;next)</p>
+                <p>-run until temp is at null or firstNode</p><br>
+                <p>if (temp at null)</p>
+                <p>&nbsp; &nbsp; not circular and returns false&nbsp;</p>
+                <p>if (temp points first node)</p>
+                <p>&nbsp; &nbsp; return true as its circular.</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp;&nbsp;</p>
+                <p>function of datatype node newNode(data){</p><br>
+                <p>-To insert new nodes and link each one of them to the previous node by storing the address of the new node to the previous one.</p>
+                <p>-Then make them point to NULL.</p>
+                <p>}</p><br>
+                <p>In int main function</p><br>
+                <p>-First insert nodes for circular linked list and check its nature by calling isCircular function.</p>
+                <p>-Since it is true through if statement it prints &quot;yes..</p>
+                <p>-Second insert a normal linked list and check its nature by calling isCircular function. As its not circular it prints &quot;no&quot;,</p><br>
+            <h3>47. What is the use of a semicolon (;) at the end of every program statement?</h3>
+                <p>It is majorly related to how the compiler reads( or parses) the entire code and breaks it into a set of instructions(or statements), to which semicolon in C acts as a boundary between two sets of instructions.</p><br>
+            <h3>48. How to call a function before main()?</h3>
+                <p>To call a function before the main(), pragma startup directive should be used. E.g.-</p><br>
+                <p>#pragma startup fun</p>
+                <p>void fun(){</p>
+                <p>printf(&quot;In fun\n&quot;);</p>
+                <p>}</p>
+                <p>main(){</p>
+                <p>printf(&quot;In main\n&quot;);</p>
+                <p>}</p>
+                <p>The output of the above program will be -</p><br>
+                <p>In fun</p>
+                <p>In main</p>
+                <p>This pragma directive, on the other hand, is compiler-dependent. This is not supported by gcc. As a result, it will ignore the startup directive and produce no error. But the output, in that case, will be -</p><br>
+                <p>In main</p><br>
+            <h3>49. Differentiate between the macros and the functions.</h3>
+                <p>The differences between macros and functions can be explained as follows:</p><br>
+                <p>Macros &nbsp; &nbsp;Functions</p>
+                <p>It is preprocessed rather than compiled. &nbsp; &nbsp;It is compiled not preprocessed.</p>
+                <p>It is preprocessed rather than compiled. &nbsp; &nbsp;Function checks for compilation errors.</p>
+                <p>Code length is increased. &nbsp; &nbsp;Code length remains the same.</p>
+                <p>Macros are faster in execution. &nbsp; &nbsp;Functions are a bit slower in execution.</p>
+                <p>Macros are useful when a small piece of code is used multiple times in a program. &nbsp; &nbsp;Functions are helpful when a large piece of code is repeated a number of times.</p><br>
+            <h3>50. Differentiate Source Codes from Object Codes</h3>
+                <p><img src="https://lh5.googleusercontent.com/OEWBGHKbFvMX7kN3xtX390Y82R3nE1YUz2IKnXSS7u3AJBjUnqpOqisZ_wt-A21k4MVDnAvYMkzqJzJQzCY4FB81uKegGnoN0Nj0ZSZ6PQy844d51bVI0aaORx3zdrJ46prHtg5EeQkiYhgFwzGTzQ" width="632" height="196"></p>
+                <p>Source Code and Object Code Difference</p>
+                <p>The difference between the Source Code and Object Code is that Source Code is a collection of computer instructions written using a human-readable programming language while Object Code is a sequence of statements in machine language, and is the output after the compiler or an assembler converts the Source Code.</p><br>
+                <p>The last point about Object Code is the way the changes are reflected. When the Source Code is modified, each time the Source Code needs to be compiled to reflect the changes in the Object Code.</p><br>
+            <h3>51. What are header files and what are its uses in C programming?</h3>
+                <p><img src="https://lh4.googleusercontent.com/HyJgG49b8q1o9MIhArv7iUWofK7q7HXovv1xclJNR_ZF6kAypMV6Ikgj7f306EymIAp3ceCgzEjvC2e3uaf7SCm2VsglWaGegEfQguyEFjLG_7Fprz4K4B3J2DoPTpURbfLK_dhVKLatYqC-N2SLqw" width="483" height="395"></p>
+                <p>Header Files in C</p>
+                <p>In C header files must have the extension as .h, which contains function definitions, data type definitions, macro, etc. The header is useful to import the above definitions to the source code using the #include directive. For example, if your source code needs to take input from the user do some manipulation and print the output on the terminal, it should have stdio.h file included as #include &lt;stdio.h&gt;, with which we can take input using scanf() do some manipulation and print using printf().</p><br>
+            <h3>52. When is the &quot;void&quot; keyword used in a function</h3>
+                <p>The keyword &ldquo;void&rdquo; is a data type that literally represents no data at all. The most obvious use of this is a function that returns nothing:</p><br>
+                <p>void PrintHello()&nbsp;</p>
+                <p>{&nbsp;</p>
+                <p>&nbsp; &nbsp; printf(&quot;Hello\n&quot;);&nbsp;</p>
+                <p>&nbsp; &nbsp; return; &nbsp; &nbsp; &nbsp; &nbsp;// the function does &quot;return&quot;, but no value is returned&nbsp;</p>
+                <p>}&nbsp;</p>
+                <p>Here we&rsquo;ve declared a function, and all functions have a return type. In this case, we&rsquo;ve said the return type is &ldquo;void&rdquo;, and that means, &ldquo;no data at all&rdquo; is returned.&nbsp;</p>
+                <p>The other use for the void keyword is a void pointer. A void pointer points to the memory location where the data type is undefined at the time of variable definition. Even you can define a function of return type void* or void pointer meaning &ldquo;at compile time we don&rsquo;t know what it will return&rdquo; Let&rsquo;s see an example of that.</p><br>
+                <p>void MyMemCopy(void* dst, const void* src, int numBytes)&nbsp;</p>
+                <p>{&nbsp;</p>
+                <p>&nbsp; &nbsp; char* dst_c = reinterpret_cast&lt;char*&gt;(dst);&nbsp;</p>
+                <p>&nbsp; &nbsp; const char* src_c = reinterpret_cast&lt;const char*&gt;(src);&nbsp;</p>
+                <p>&nbsp; &nbsp; for (int i = 0; i &lt; numBytes; ++i)&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; dst_c[i] = src_c[i];&nbsp;</p>
+                <p>}&nbsp;</p><br>
+            <h3>53. What is dynamic data structure?</h3>
+                <p>A dynamic data structure (DDS) refers to an organization or collection of data in memory that has the flexibility to grow or shrink in size, enabling a programmer to control exactly how much memory is utilized. Dynamic data structures change in size by having unused memory allocated or de-allocated from the heap as needed.&nbsp;</p><br>
+                <p>Dynamic data structures play a key role in programming languages like C, C++, and Java because they provide the programmer with the flexibility to adjust the memory consumption of software programs.</p><br>
+            <h3>54. Add Two Numbers Without Using the Addition Operator</h3>
+                <p>For the sum of two numbers, we use the addition (+) operator. In these tricky C programs, we will write a C program to add two numbers without using the addition operator.</p><br>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>#include&lt;stdlib.h&gt;</p>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; int x, y;</p>
+                <p>&nbsp; printf(&quot;Enter two number: &quot;);</p>
+                <p>&nbsp; scanf(&quot;%d %d&quot;,&amp;x,&amp;y);</p><br>
+                <p>&nbsp; // method 1</p>
+                <p>&nbsp; printf(&quot;%d\n&quot;, x-(-y));</p><br>
+                <p>&nbsp; // method 2</p>
+                <p>&nbsp; printf(&quot;%d\n&quot;, -(-x-y));</p><br>
+                <p>&nbsp; // method 3</p>
+                <p>&nbsp; printf(&quot;%d\n&quot;, abs(-x-y));</p><br>
+                <p>&nbsp; // method 4</p>
+                <p>&nbsp; printf(&quot;%d&quot;, x-(~y)-1);</p><br>
+                <p>&nbsp; return 0;</p>
+                <p>}</p><br>
+            <h3>55. Subtract Two Number Without Using Subtraction Operator</h3>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>#include&lt;stdlib.h&gt;</p>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp;int x, y;</p>
+                <p>&nbsp; &nbsp;printf(&quot;Enter two number: &quot;);</p>
+                <p>&nbsp; &nbsp;scanf(&quot;%d %d&quot;,&amp;x,&amp;y);</p>
+                <p>&nbsp; &nbsp;printf(&quot;%d&quot;, x+(~y)+1);</p>
+                <p>&nbsp; &nbsp;return 0;</p>
+                <p>}</p>
+                <p>The bitwise complement operator is used in this program. The bitwise complement of number ~y=-(y+1). So, expression will become x+(-(y+1))+1=x-y-1+1=x-y</p><br>
+            <h3>56. Multiply an Integer Number by 2 Without Using Multiplication Operator</h3>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp;int x;</p>
+                <p>&nbsp; &nbsp;printf(&quot;Enter a number: &quot;);</p>
+                <p>&nbsp; &nbsp;scanf(&quot;%d&quot;,&amp;x);</p>
+                <p>&nbsp; &nbsp;printf(&quot;%d&quot;, x&lt;&lt;1);</p>
+                <p>&nbsp; &nbsp;return 0;</p>
+                <p>}</p>
+                <p>The left shift operator shifts all bits towards the left by a certain number of specified bits. The expression x&lt;&lt;1 always returns x*2. Note that the shift operator doesn&rsquo;t work on floating-point values.</p><br>
+                <p>For multiple of x by 4, use x&lt;&lt;2. Similarly x&lt;&lt;3 multiply x by 8. For multiple of the number x by 2^n, use x&lt;&lt;n.</p><br>
+            <h3>57. Check whether the number is EVEN or ODD, without using any arithmetic or relational operators</h3>
+                <p>#include&lt;stdio.h&gt;</p>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp;int x;</p>
+                <p>&nbsp; &nbsp;printf(&quot;Enter a number: &quot;);</p>
+                <p>&nbsp; &nbsp;scanf(&quot;%d&quot;, &amp;x);</p>
+                <p>&nbsp; &nbsp;(x&amp;1)?printf(&quot;Odd&quot;):printf(&quot;Even&quot;);</p>
+                <p>&nbsp; &nbsp;return 0;</p>
+                <p>}</p>
+                <p>The bitwise and(&amp;) operator can be used to quickly check the number is odd or even.</p><br>
+            <h3>58. Reverse the Linked List. Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</h3>
+                <p>Assume that we have linked list 1 &rarr; 2 &rarr; 3 &rarr; &Oslash;, we would like to change it to &Oslash; &larr; 1 &larr; 2 &larr; 3.</p><br><br>
+                <p>While you travel the linked list, change the current node&apos;s next pointer to point to its previous element. reference to the previous nodes should be stored into a temp variable as shown so that we don&rsquo;t lose track of the swapped node. You also need another pointer to store the next node before changing the reference. Also when we are done return the new head of the reversed list.</p><br>
+                <p>/* Function to reverse the linked list */</p>
+                <p>static void reverse(struct Node** head_ref)&nbsp;</p>
+                <p>{&nbsp;</p>
+                <p>&nbsp; &nbsp; struct Node* prev &nbsp; = NULL;&nbsp;</p>
+                <p>&nbsp; &nbsp; struct Node* current = *head_ref;&nbsp;</p>
+                <p>&nbsp; &nbsp; struct Node* next;&nbsp;</p>
+                <p>&nbsp; &nbsp; while (current != NULL)&nbsp;</p>
+                <p>&nbsp; &nbsp; {&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // store next</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; next &nbsp;= current-&gt;next; &nbsp;&nbsp;</p><br>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // reverse curr node pointer&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; current-&gt;next = prev; &nbsp; &nbsp;</p><br>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // move pointer one position ahead</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; prev = current;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; current = next;&nbsp;</p>
+                <p>&nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp; &nbsp; *head_ref = prev;&nbsp;</p>
+                <p>}</p><br>
+            <h3>59. Check for Balanced Parentheses using Stack</h3>
+                <p>Given a string s containing just the characters &apos;(&apos;, &apos;)&apos;, &apos;{&apos;, &apos;}&apos;, &apos;[&apos; and &apos;]&apos;, determine if the input string is valid.</p><br>
+                <p>An input string is valid if:</p><br>
+                <p>Open brackets must be closed by the same type of brackets.</p>
+                <p>Open brackets must be closed in the correct order.</p>
+                <p>Example 1:</p>
+                <p>&nbsp;Input: s = &quot;()&quot;</p>
+                <p>&nbsp;Output: true</p><br>
+                <p>Example 2:</p>
+                <p>&nbsp;Input: s = &quot;()[]{}&quot;</p>
+                <p>&nbsp;Output: true</p><br>
+                <p>Example 3:</p>
+                <p>&nbsp;Input: s = &quot;(]&quot;</p>
+                <p>&nbsp;Output: false</p><br><br>
+                <p>Below is the source code for C Program to Check for Balanced Parentheses using Stack which is successfully compiled and run on Windows System to produce desired output as shown below :</p><br>
+                <p>int check(char exp[] )</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; int i;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; char temp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; for(i=0;i&lt;strlen(exp);i++)</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(exp[i]==&apos;(&apos; || exp[i]==&apos;{&apos; || exp[i]==&apos;[&apos;)</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push(exp[i]);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(exp[i]==&apos;)&apos; || exp[i]==&apos;}&apos; || exp[i]==&apos;]&apos;)</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(top==-1) &nbsp; &nbsp;/*stack empty*/</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Right parentheses are more than left parentheses\n&quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp=pop();</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(!match(temp, exp[i]))</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Mismatched parentheses are : &quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%c and %c\n&quot;,temp,exp[i]);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; if(top==-1) /*stack empty*/</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Balanced Parentheses\n&quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 1;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; else</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Left parentheses more than right parentheses\n&quot;);</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+                <p>}</p><br>
+                <p><img src="https://lh4.googleusercontent.com/_1ZCq9wz0mexRnjMitbxkzOAb5rggNUwdo5v01VPVBer9ZbXtuOMqPP7TNsWtsojASvZ4QInjNpq7Q_8MAeeN19UfumGucMAL_JF_SfBUnePgvFBp8aCiSx1EhW_DCFV9UozR81jJACYv2VF3HHUDw" width="668" height="151"></p><br>
+            <h3>60. Program to find n&rsquo;th Fibonacci number</h3>
+                <p>Fibonacci sequence is characterized by the fact that every number after the first two is the sum of the two preceding ones. For example, consider below sequence</p><br>
+                <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, . .. and so on</p><br>
+                <p>Where in F{n} = F{n-1} + F{n-2} with base values F(0) = 0 and &lt;code&gt;F(1) = 1</p><br>
+                <p>Below is naive implementation for finding the nth member of the Fibonacci sequence</p><br>
+                <p>// Function to find the nth Fibonacci number</p>
+                <p>int fib(int n)</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; if (n &lt;= 1) {</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; return n;</p>
+                <p>&nbsp; &nbsp; }</p>
+                <p>&nbsp;</p>
+                <p>&nbsp; &nbsp; return fib(n - 1) + fib(n - 2);</p>
+                <p>}</p>
+                <p>&nbsp;</p>
+                <p>int main()</p>
+                <p>{</p>
+                <p>&nbsp; &nbsp; int n = 8;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp; &nbsp; printf(&quot;nth Fibonacci number is %d&quot;, fib(8));</p>
+                <p>&nbsp;</p>
+                <p>&nbsp; &nbsp; return 0;</p>
+                <p>}</p><br>
+            <h3>61. Write a program to find the node at which the intersection of two singly linked lists begins.</h3>
+                <p>Let&apos;s take an example of the following two linked lists which intersect at node c1.</p>
+                <p>Intersection of Two Linked List</p>
+                <p><img src="https://lh3.googleusercontent.com/jFvjDauQAXVK1mHcEkoutUKWBpvDlXjo0eexqi5gFXn4HUdTos-2KrAoYIssW2JQ4GLZunUpvyl2-JP5zCR1qcTYGONw40WsizkPDg-_SOrf4ZNHbQK716OcxXJiOV4TVJvZ9MmCqsOPenOD3lGyPw" width="720" height="271"></p>
+                <p>Solution -</p><br>
+                <p>Get count of the nodes in the first list, let count be c1.</p>
+                <p>Get count of the nodes in the second list, let count be c2.</p>
+                <p>Get the difference of counts d = abs(c1 &ndash; c2)</p>
+                <p>Now traverse the bigger list from the first node till d nodes so that from here onwards both the lists have an equal no of nodes</p>
+                <p>Then we can traverse both the lists in parallel till we come across a common node. (Note that getting a common node is done by comparing the address of the nodes)</p>
+                <p>// Function to get the intersection point&nbsp;</p>
+                <p>// of the given linked lists&nbsp;</p>
+                <p>int getIntersectionNode(Node* head1, Node* head2)&nbsp;</p>
+                <p>{&nbsp;</p>
+                <p>&nbsp; &nbsp; Node *curr1 = head1, *curr2 = head2;&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; // While both the pointers are not equal&nbsp;</p>
+                <p>&nbsp; &nbsp; while (curr1 != curr2) {&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // If the first pointer is null then&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // set it to point to the head of&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // the second linked list&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; if (curr1 == NULL) {&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; curr1 = head2;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // Else point it to the next node&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; else {&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; curr1 = curr1-&gt;next;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // If the second pointer is null then&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // set it to point to the head of&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // the first linked list&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; if (curr2 == NULL) {&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; curr2 = head1;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; // Else point it to the next node&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; else {&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; curr2 = curr2-&gt;next;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; // Return the intersection node&nbsp;</p>
+                <p>&nbsp; &nbsp; return curr1-&gt;data;&nbsp;</p>
+                <p>}</p><br>
+            <h3>62. Merge Two sorted Linked List</h3>
+                <p>Merge two sorted linked lists and return them as a sorted list. The list should be made by splicing together the nodes of the first two lists.</p><br>
+                <p><img src="https://lh4.googleusercontent.com/-m6PSXSleDdsRzMzuGQ8QAjeCk1B4ZTCvFrBzLJD89iuPmKCflTR_m6zBmJF8s1qc3cXqkSQt7R6-BY0qLyrVGpuJtvPv9EFHtbET_kZE34acDbV5U7-DfNV91fzZR8wjrv1wDgl8oF7baQNEXWZfw" width="306" height="152"></p><br>
+                <p>NodePtr merge_sorted(NodePtr head1, NodePtr head2) {</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; // if both lists are empty then merged list is also empty</p>
+                <p>&nbsp; // if one of the lists is empty then other is the merged list</p><br>
+                <p>&nbsp; if (head1 == nullptr) {</p>
+                <p>&nbsp; &nbsp; return head2;</p>
+                <p>&nbsp; }&nbsp;</p>
+                <p>&nbsp; else if (head2 == nullptr) {</p>
+                <p>&nbsp; &nbsp; return head1;</p>
+                <p>&nbsp; }</p><br>
+                <p>&nbsp; NodePtr mergedHead = nullptr;</p>
+                <p>&nbsp; if (head1-&gt;data &lt;= head2-&gt;data) {</p>
+                <p>&nbsp; &nbsp; mergedHead = head1;</p>
+                <p>&nbsp; &nbsp; head1 = head1-&gt;next;</p>
+                <p>&nbsp; }&nbsp;</p>
+                <p>&nbsp; else {</p>
+                <p>&nbsp; &nbsp; mergedHead = head2;</p>
+                <p>&nbsp; &nbsp; head2 = head2-&gt;next;</p>
+                <p>&nbsp; }</p><br>
+                <p>&nbsp; NodePtr mergedTail = mergedHead;</p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp; while (head1 != nullptr &amp;&amp; head2 != nullptr) {</p>
+                <p>&nbsp; &nbsp; NodePtr temp = nullptr;</p>
+                <p>&nbsp; &nbsp; if (head1-&gt;data &lt;= head2-&gt;data) {</p>
+                <p>&nbsp; &nbsp; &nbsp; temp = head1;</p>
+                <p>&nbsp; &nbsp; &nbsp; head1 = head1-&gt;next;</p>
+                <p>&nbsp; &nbsp; }&nbsp;</p>
+                <p>&nbsp; &nbsp; else {</p>
+                <p>&nbsp; &nbsp; &nbsp; temp = head2;</p>
+                <p>&nbsp; &nbsp; &nbsp; head2 = head2-&gt;next;</p>
+                <p>&nbsp; &nbsp; }</p><br>
+                <p>&nbsp; &nbsp; mergedTail-&gt;next = temp;</p>
+                <p>&nbsp; &nbsp; mergedTail = temp;</p>
+                <p>&nbsp; }</p><br>
+                <p>&nbsp; if (head1 != nullptr) {</p>
+                <p>&nbsp; &nbsp; mergedTail-&gt;next = head1;</p>
+                <p>&nbsp; }</p>
+                <p>&nbsp;else if (head2 != nullptr) {</p>
+                <p>&nbsp; &nbsp; mergedTail-&gt;next = head2;</p>
+                <p>&nbsp; }</p>
+                <p>&nbsp; return mergedHead;</p>
+                <p>}</p><br>
+                <p>Runtime Complexity Linear, O(m + n) where m and n are lengths of both linked lists.&nbsp;</p><br>
+                <p>Memory Complexity Constant, O(1)</p><br>
+                <p>Maintain a head and a tail pointer on the merged linked list. Then choose the head of the merged linked list by comparing the first node of both linked lists. For all subsequent nodes in both lists, you choose the smaller current node and link it to the tail of the merged list, moving the current pointer of that list one step forward.</p><br>
+                <p>You keep doing this while there are some remaining elements in both lists. If there are still some elements in only one of the lists, you link this remaining list to the tail of the merged list.</p><br>
+                <p>Initially, the merged linked list is NULL. Compare the value of the first two nodes and make the node with the smaller value the head node of the merged linked list. In this example, it is 4 from head1.</p><br>
+                <p>Since it&rsquo;s the first and only node in the merged list, it will also be the tail. Then move head1 one step forward.</p><br>
+                <p>Conclusion:</p>
+                <p>C is the foundational language from which practically all other languages are built. C is the programming language&apos;s base. For writing system applications, it is a very popular and frequently used language. Even if new languages have surpassed it in popularity, it remains one of the most popular programming languages. The C questions listed here will aid you in interviews as well as improve your learning. I hope you found these to be helpful!</p><br>
+            <h3>63.</h3>
+                <h2>Additional&nbsp;</h2>
+                <h2>Notes</h2>
+                <p>Sources:</p>
+                <p><a href="https://www.interviewbit.com/c-interview-questions/">https://www.interviewbit.com/c-interview-questions/</a></p>
+
+            </div>
+
+
+
+
+    </div>
+    </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Sourav's Development Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            www.souravparida.com | All rights reserved
+        </div>
+        </div>
+    </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
